@@ -24,12 +24,25 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/app/finance",
+                "output": "/finance"
               }
             ],
             "styles": [
+              "src/assets/css/tailwind.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/app.js"
+            ]
           },
           "configurations": {
             "production": {

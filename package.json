@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "prepare:finance": "node scripts/prepare-finance-index.mjs",
+    "start": "npm run prepare:finance && ng serve",
+    "build": "npm run prepare:finance && ng build",
+    "watch": "npm run prepare:finance && ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
@@ -26,6 +27,7 @@
     "@angular-devkit/build-angular": "^18.2.21",
     "@angular/cli": "^18.2.21",
     "@angular/compiler-cli": "^18.2.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
@@ -33,6 +35,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^4.3.3",
     "typescript": "~5.5.2"
   }
 }
